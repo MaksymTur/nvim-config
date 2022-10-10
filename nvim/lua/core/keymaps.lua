@@ -56,6 +56,11 @@ vim.api.nvim_create_user_command('Cd', 'cd %:p:h',
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
+--Copilot
+vim.cmd[[imap <silent><script><expr> <C-a> copilot#Accept("\\<CR>")]]
+vim.g.copilot_no_tab_map = true;
+--vim.keymap.set.keymap("i", "<C-a>", ":copilot#Accept('\\<CR>')<CR>", {silent = true})
+
 --Swap to header and back
 map('n', '<F2>', ':Ouroboros<CR>')
 
